@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id            :bigint           not null, primary key
+#  name          :string
+#  starting_date :datetime
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  name: MyString
+  technology: MyString
+  starting_date: 2021-04-29 12:01:44
+
+two:
+  name: MyString
+  technology: MyString
+  starting_date: 2021-04-29 12:01:44

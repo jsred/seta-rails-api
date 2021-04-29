@@ -1,15 +1,21 @@
 default: &default
-  adapter:
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  username: postgres
 
 development:
   <<: *default
   database: seta-rails-api-dev
+  host: localhost
+  password: <%= ENV.fetch("POSTGRES_DATABASE_PASSWORD") %>
 
 test:
   <<: *default
   database: seta-rails-api-test
+  host: localhost
+  password: <%= ENV.fetch("POSTGRES_DATABASE_PASSWORD") %>
 
 production:
   <<: *default
